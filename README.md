@@ -1,2 +1,2 @@
-# functionJunction
-A repo containing practice functions or creatively testing functions
+# Function Junction
+A repository containing mostly practice functions and some test functions.
