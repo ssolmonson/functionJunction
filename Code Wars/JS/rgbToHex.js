@@ -49,3 +49,9 @@ function rgb(r, g, b){
   // Concats the final hexadecimal string value
   return hexDecR + hexDecG + hexDecB
 }
+
+// Possible things to adjust upon further review
+// 1. Have upper and lower limits return their string equivalent i.e. FF for 255 and 00 for 0
+// instead of passing them through conversion
+// 2. Refractor repeating statements placing a function inside the main function.
+// This will drastically reduce the lines neccessary.
