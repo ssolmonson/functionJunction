@@ -37,15 +37,15 @@ function rgb(r, g, b){
 
   // hexDec = r.toString(16).toUpperCase() + g.toString(16).toUpperCase() + b.toString(16).toUpperCase()
   if (hexDecR.length = 1) {
-    hexDecR = hexDecR.padStart(2, hexDecR)
+    hexDecR = hexDecR.padStart(2, 0)
   }
 
   if (hexDecG.length = 1) {
-    hexDecG = hexDecG.padStart(2, hexDecG)
+    hexDecG = hexDecG.padStart(2, 0)
   }
 
   if (hexDecB.length = 1) {
-    hexDecB = hexDecB.padStart(2, hexDecB)
+    hexDecB = hexDecB.padStart(2, 0)
   }
 
 
