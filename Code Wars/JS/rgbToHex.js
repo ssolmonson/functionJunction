@@ -1,8 +1,6 @@
 function rgb(r, g, b){
   // complete this function
-  // hexDec = r.toString(16).toUpperCase() + g.toString(16).toUpperCase() + b.toString(16).toUpperCase()
 
-  // initiate variables for the rgb hex values
   hexDecR = null
   hexDecG = null
   hexDecB = null
@@ -10,12 +8,18 @@ function rgb(r, g, b){
   if (r >= 255) {
     r = 255
     hexDecR = r.toString(16).toUpperCase()
+  } else if (r < 0) {
+    r = 0
+    hexDecR = r.toString(16).toUpperCase()
   } else {
     hexDecR = r.toString(16).toUpperCase()
   }
 
   if (g >= 255) {
-  g = 255
+    g = 255
+    hexDecG = g.toString(16).toUpperCase()
+  } else if (g < 0) {
+    g = 0
     hexDecG = g.toString(16).toUpperCase()
   } else {
     hexDecG = g.toString(16).toUpperCase()
@@ -24,11 +28,14 @@ function rgb(r, g, b){
   if (b >= 255) {
     b = 255
     hexDecB = b.toString(16).toUpperCase()
+  } else if (b < 0) {
+    b = 0
+    hexDecB = b.toString(16).toUpperCase()
   } else {
     hexDecB = b.toString(16).toUpperCase()
   }
 
-  // add a leading 0 if the hexadecimal string is a single digit
+  // hexDec = r.toString(16).toUpperCase() + g.toString(16).toUpperCase() + b.toString(16).toUpperCase()
   if (hexDecR.length = 1) {
     hexDecR = hexDecR.padStart(2, hexDecR)
   }
@@ -40,6 +47,7 @@ function rgb(r, g, b){
   if (hexDecB.length = 1) {
     hexDecB = hexDecB.padStart(2, hexDecB)
   }
+
 
 
   return hexDecR + hexDecG + hexDecB
