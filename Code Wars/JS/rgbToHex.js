@@ -1,10 +1,5 @@
 function rgb(r, g, b){
   // complete this function
-
-  hexDecR = null
-  hexDecG = null
-  hexDecB = null
-
   if (r >= 255) {
     r = 255
     hexDecR = r.toString(16).toUpperCase()
