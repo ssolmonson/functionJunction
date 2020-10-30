@@ -1,5 +1,7 @@
 function rgb(r, g, b){
   // complete this function
+  // Defines each arguments value  that is outside the range of 0 to 255 as either
+  // the highest of lowest value i.e. 0 or 255
   if (r >= 255) {
     r = 255
     hexDecR = r.toString(16).toUpperCase()
@@ -30,7 +32,7 @@ function rgb(r, g, b){
     hexDecB = b.toString(16).toUpperCase()
   }
 
-  // hexDec = r.toString(16).toUpperCase() + g.toString(16).toUpperCase() + b.toString(16).toUpperCase()
+  // Places the leading 0 back onto those values which lost them through the output
   if (hexDecR.length = 1) {
     hexDecR = hexDecR.padStart(2, 0)
   }
@@ -44,6 +46,6 @@ function rgb(r, g, b){
   }
 
 
-
+  // Concats the final hexadecimal string value
   return hexDecR + hexDecG + hexDecB
 }
