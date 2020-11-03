@@ -31,3 +31,6 @@ function likes(names) {
     return names[0] + " " + names[1] + names.split + " like this"
   }
 }
+
+// Review code to refractor
+// Solves the issue but should be worked on to prevent uncessary repitition
