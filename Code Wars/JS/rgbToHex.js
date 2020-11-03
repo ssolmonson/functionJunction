@@ -3,30 +3,30 @@ function rgb(r, g, b){
   // Defines each arguments value  that is outside the range of 0 to 255 as either
   // the highest of lowest value i.e. 0 or 255
   if (r >= 255) {
-    r = 255
+    r = 'FF'
     hexDecR = r.toString(16).toUpperCase()
   } else if (r < 0) {
-    r = 0
+    r = '00'
     hexDecR = r.toString(16).toUpperCase()
   } else {
     hexDecR = r.toString(16).toUpperCase()
   }
 
   if (g >= 255) {
-    g = 255
+    g = 'FF'
     hexDecG = g.toString(16).toUpperCase()
   } else if (g < 0) {
-    g = 0
+    g = '00'
     hexDecG = g.toString(16).toUpperCase()
   } else {
     hexDecG = g.toString(16).toUpperCase()
   }
 
   if (b >= 255) {
-    b = 255
+    b = 'FF'
     hexDecB = b.toString(16).toUpperCase()
   } else if (b < 0) {
-    b = 0
+    b = '00'
     hexDecB = b.toString(16).toUpperCase()
   } else {
     hexDecB = b.toString(16).toUpperCase()
