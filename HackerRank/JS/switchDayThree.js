@@ -25,8 +25,12 @@ function readLine() {
 function getLetter(s) {
     let letter;
     // Write your code here
+    // wriiten alternitively this would be unescessary
     let char = s[0]
+    // switch would then be true
     switch(char) {
+      // alternitively, case 'aeiou'.includes(s[0])
+      // or with regex, case /^[aeiou]/.test(s)
         case 'a':
         case 'e':
         case 'i':
