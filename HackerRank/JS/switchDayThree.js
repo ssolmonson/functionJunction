@@ -25,7 +25,7 @@ function readLine() {
 function getLetter(s) {
     let letter;
     // Write your code here
-    let char = s[1]
+    let char = s[0]
     switch(char) {
         case 'a':
         case 'e':
@@ -48,11 +48,17 @@ function getLetter(s) {
         case 'm':
             letter = 'C'
             break;
-        case 15:
-        case 16:
-        case 17:
-        case 18:
-        case 19:
+        case 'n':
+        case 'p':
+        case 'q':
+        case 'r':
+        case 's':
+        case 't':
+        case 'v':
+        case 'w':
+        case 'x':
+        case 'y':
+        case 'z':
             letter = 'D'
             break;
     }
