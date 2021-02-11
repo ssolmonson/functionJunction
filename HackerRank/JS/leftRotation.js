@@ -26,9 +26,13 @@ function readLine() {
 
 // Complete the rotLeft function below.
 function rotLeft(a, d) {
+    let splitPoint = d
     // determine if d is greater than array length
-    // if greater divide d by length
-    // using remainder as split point
+    if (d > a.length) {
+      // if greater divide d by length
+      // using remainder as split point
+      splitPoint = (d % a.length)
+    }
     // split array into two arrays at position d
     //
     // let splitArr = a.slice(d)
@@ -36,8 +40,8 @@ function rotLeft(a, d) {
     // return splitArr.concat(origArr)
     //
     // simplified one line of above
-    const newArr = a.slice(d).concat(a.slice(0, d))
-    return newArr
+    // const newArr = a.slice(splitPoint).concat(a.slice(0, splitPoint))
+    return a.slice(splitPoint).concat(a.slice(0, splitPoint))
     // concat both arrays
 }
 
