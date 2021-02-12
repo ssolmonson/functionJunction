@@ -45,3 +45,17 @@ function cakes(recipe, available) {
 }
 
 // cakes({"cream":200,"flour":300,"sugar":150,"milk":100,"oil":100}, {"sugar":1700,"flour":20000,"milk":20000,"oil":30000,"cream":5000})
+
+// Notes
+//
+// Other possible, more simple solutions:
+//
+// function cakes(recipe, available) {
+//   return Object.keys(recipe).reduce(function(val, ingredient) {
+//     return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+//   }, Infinity)
+// }
+//
+// const cakes = (needs, has) => Math.min(
+//   ...Object.keys(needs).map(key => Math.floor(has[key] / needs[key] || 0))
+// )
