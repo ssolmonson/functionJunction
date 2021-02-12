@@ -22,11 +22,21 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-// Staircase function
+// Complete the staircase function below.
 function staircase(n) {
-  // loop through given nuber to produce lines
-  // print final result
-
+    let i = n
+    let stairs = ' '
+    // for (i = n; i > 0; i--) {
+    //     while (i > 0) {
+    //         stairs += '#'
+    //         i--
+    //     }
+    // }
+    while (i > 0) {
+        stairs += '#'
+        i--
+    }
+    return stairs
 }
 
 function main() {
