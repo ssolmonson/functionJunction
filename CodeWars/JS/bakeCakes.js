@@ -19,6 +19,17 @@ function cakes(recipe, available) {
     //   }
     // }, {})
   const filteredAvailKeys = Object.keys(filteredAvail)
+  //
+  function sortingArrays(a, b) {
+    return recipeKeys.indexOf(a) - recipeKeys.indexOf(b)
+  }
+
+  const sortedAvailKeys = filteredAvailKeys.sort(sortingArrays)
+
+  // console.log(filteredAvail)
+  // console.log(filteredAvailKeys)
+  // console.log(sortedAvailKeys)
+  // console.log(recipeKeys)
   // compare two object values for each key
   if (recipeKeys.length !== filteredAvailKeys.length) {
     return 0
@@ -32,3 +43,5 @@ function cakes(recipe, available) {
     return Math.min(...howMany)
   }
 }
+
+// cakes({"cream":200,"flour":300,"sugar":150,"milk":100,"oil":100}, {"sugar":1700,"flour":20000,"milk":20000,"oil":30000,"cream":5000})
