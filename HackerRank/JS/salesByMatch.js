@@ -35,9 +35,9 @@ function sockMerchant(n, ar) {
     // define variable for number of pairs
     let numberPairs = 0
     // define sorted array
-    let sortedPairs = arr.sort((a,b) => a - b )
+    let sortedPairs = ar.sort((a,b) => a - b )
     // loop through array ar
-    for (i = 0; i < n - 1; i++) {
+    for (let i = 0; i < n - 1; i++) {
       // find how many of one number in the array there is
       // by looping through sortedPairs array
       if (sortedPairs[i] === sortedPairs[i + 1]) {
