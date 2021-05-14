@@ -32,7 +32,15 @@ function readLine() {
  */
 
 function countingValleys(steps, path) {
-    // Write your code here
+    // Define variable for elevation
+    // Define variable for valleys
+    // Convert path from string into array
+    // Loop through array
+    // Add an elevation if 'U'
+    // Removed an elevation if 'D'
+    // If 'U' and elevation is equal to zero
+    // Add to valleys
+    // Return valleys variable
 
 }
 
