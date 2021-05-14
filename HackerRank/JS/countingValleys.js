@@ -33,15 +33,30 @@ function readLine() {
 
 function countingValleys(steps, path) {
     // Define variable for elevation
+    let elevation = 0
     // Define variable for valleys
-    // Convert path from string into array
-    // Loop through array
-    // Add an elevation if 'U'
-    // Removed an elevation if 'D'
-    // If 'U' and elevation is equal to zero
-    // Add to valleys
-    // Return valleys variable
+    let valleys = 0
 
+    // Convert path from string into array
+    // And loop through array
+    path.split('').forEach(level => {
+      // Add an elevation if 'U'
+      if (level === 'U') {
+        ++elevation
+      // Remove an elevation if 'D'
+      } else {
+        --elevation
+      }
+      // If 'U' and elevation is equal to zero
+
+      if (level === 'U' && elevation === 0) {
+        // Add to valleys
+        ++valleys
+      }
+    })
+
+    // Return valleys variable
+    return valleys
 }
 
 function main() {
