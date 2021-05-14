@@ -31,15 +31,26 @@ function readLine() {
 
 function jumpingOnClouds(c) {
     // Define variable for jumps
+    let jumps = 0
     // Loop through cloud array 'c'
-    // If index = 0 and index + 2 = 0
-    // Add to jumps variable
-    // and add +2 to i
-    // Else if index = 0 and index + 1 = 0
-    // Add to jumps variable
-    // and add +1 to i
-    // return jumps
+    for (let i = 0; i < c.length; i++) {
+      // If index = 0 and index + 2 = 0
+      if (c[i] === 0 && c[i + 2] === 0) {
+        // Add to jumps variable
+        jumps++
+        // and add +2 to i
+        i += 2
+      // Else if index = 0 and index + 1 = 0
+      } else if (c[i] === 0 && c[i + 1] === 0) {
+        // Add to jumps variable
+        jumps++
+        // and add +1 to i
+        i += 1
+      }
+    }
 
+    // return jumps
+    return jumps
 }
 
 function main() {
