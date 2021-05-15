@@ -57,6 +57,9 @@ function repeatedString(s, n) {
     amountA += remainderStr.replace(/[^a]/g, "").length
 
     return amountA
+
+    // Alternatively can be compacted to:
+    // return ((s.substring(0, (n % s.length))).replace(/[^a]/g, "").length) + (((Math.floor(n / s.length)) * (s.replace(/[^a]/g, "").length)))
   }
 }
 
