@@ -49,7 +49,7 @@ function repeatedString(s, n) {
     // Multiply this whole number by amountInStr and ass to amountA
     amountA += (numberOfTimes * amountInStr)
     // Use remainder to cut new string
-    let remainderIndex = (n % s.length) - 1
+    let remainderIndex = (n % s.length)
     // Define Substring
     let remainderStr = s.substring(0, remainderIndex)
     // Find amount in cut string
