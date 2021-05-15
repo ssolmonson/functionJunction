@@ -32,16 +32,17 @@ function readLine() {
 function jumpingOnClouds(c) {
     // Define variable for jumps
     let jumps = 0
+    let i = 0
     // Loop through cloud array 'c'
-    for (let i = 0; i < c.length; i++) {
+    while (i < c.length - 1) {
       // If index = 0 and index + 2 = 0
-      if (c[i] === 0 && c[i + 2] === 0) {
+      if (c[i + 2] === 0) {
         // Add to jumps variable
         jumps++
         // and add +2 to i
         i += 2
       // Else if index = 0 and index + 1 = 0
-      } else if (c[i] === 0 && c[i + 1] === 0) {
+      } else {
         // Add to jumps variable
         jumps++
         // and add +1 to i
