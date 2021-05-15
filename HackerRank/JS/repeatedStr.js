@@ -33,9 +33,9 @@ function readLine() {
 
 function repeatedString(s, n) {
     // If length of string 's' is 1 and contains a
-    if (s.length === 1 && s.includes('a')) {
-    // return n
-    return n
+  if (s.length === 1 && s.includes('a')) {
+  // return n
+  return n
 
   } else {
 
