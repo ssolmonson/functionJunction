@@ -27,11 +27,17 @@ function readLine() {
  */
 
 function minimumBribes(q) {
-    // Find original position of numbers
-    // Find new position of certain moved numbers
-    // If any new position is greater than 2 places
-    // Print 'Too chaotic'
-    // If less then two, print amount of bribes necessary to acheive order
+    // Define bribes variable
+    let bribes = 0
+
+    // Loop through the queue 'q'
+    // If position is greater than 2 moves
+    // return 'Too chaotic'
+    // Otherwise loop through queue position
+    // add to bribes
+
+    // return bribes
+    return bribes
 
 }
 
