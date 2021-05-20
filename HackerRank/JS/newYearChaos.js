@@ -37,9 +37,9 @@ function minimumBribes(q) {
       // If position is greater than 2 moves
       if (q[i] - (i + 1) > 2) {
         // return 'Too chaotic'
-        return "Too Chaotic"
+        console.log("Too chaotic")
       }
-      //loop through queue position and compare to new postion
+      // loop through queue position and compare to new postion
       for (j = Math.max(0, (q[i]) - 2); j < i; j++) {
         if (q[j] > q[i]) {
           // Add to bribes count
@@ -49,7 +49,7 @@ function minimumBribes(q) {
     }
 
     // return bribes
-    return bribes
+    console.log(bribes)
 
 }
 
