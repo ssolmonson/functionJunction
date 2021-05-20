@@ -30,11 +30,23 @@ function minimumBribes(q) {
     // Define bribes variable
     let bribes = 0
 
+    let i
+    let j
     // Loop through the queue 'q'
-    // If position is greater than 2 moves
-    // return 'Too chaotic'
-    // Otherwise loop through queue position
-    // add to bribes
+    for (i = 0; i < q.length; i++) {
+      // If position is greater than 2 moves
+      if (q[i] - (i + 1) > 2) {
+        // return 'Too chaotic'
+        return "Too Chaotic"
+      }
+      //loop through queue position and compare to new postion
+      for (j = Math.max(0, (q[i]) - 2); j < i; j++) {
+        if (q[j] > q[i]) {
+          // Add to bribes count
+          bribes++
+        }
+      }
+    }
 
     // return bribes
     return bribes
