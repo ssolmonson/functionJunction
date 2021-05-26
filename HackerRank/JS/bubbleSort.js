@@ -32,16 +32,22 @@ function countSwaps(a) {
 
   // Loop through current array to swap numbers
   for (let i = 0; i < a.length; i++) {
-      if (a[i] > a[i + 1]) {
+    for (let j = 0; j < a.length - 1; j++) {
+        if (a[i] > a[i + 1]) {
+            let tmp = a[i]
+            a[i] = a[i + 1]
+            a[i + 1] = tmp
+            // Add to count for each swap
+            count++
+        }
 
-      }
-  // Add to count for each swap
+    }
   }
 
   // Output
   console.log("Array is sorted in " + count + " swaps.")
-  // console.log("First Element: " + a[0])
-  // console.log("Last Element: " + a[a.length - 1])
+  console.log("First Element: " + a[0])
+  console.log("Last Element: " + a[a.length - 1])
 
 }
 
