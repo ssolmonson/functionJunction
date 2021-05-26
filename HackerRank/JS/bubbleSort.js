@@ -32,14 +32,13 @@ function countSwaps(a) {
 
   // Loop through current array to swap numbers
   for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < a.length - 1; j++) {
-        if (a[i] > a[i + 1]) {
-            let tmp = a[i]
-            a[i] = a[i + 1]
-            a[i + 1] = tmp
-            // Add to count for each swap
-            count++
-        }
+    while (a[i] !== i + 1) {
+
+        let tmp = a[i]
+        a[i] = a[i + 1]
+        a[i + 1] = tmp
+        // Add to count for each swap
+        count++
 
     }
   }
