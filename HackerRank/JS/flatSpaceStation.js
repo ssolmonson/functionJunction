@@ -27,7 +27,19 @@ function readLine() {
 // Complete the flatlandSpaceStations function below.
 function flatlandSpaceStations(n, c) {
 
+  // Build out an array of numbers starting with 0 based on the number of cities (n)
 
+  // Define array to be used for distance of each city to a space station
+
+  // If n is equal to c.length - 1
+  // return 0
+  // Otherwise
+  // Loop through the created amount of cities array
+  // Check cities with distance to each of the space stations cities array (c)
+  // Use the lowest and and to dstance array
+
+  // return the max number in the distance array
+  // Possibly need to console.log the max distance number to properly check tests
 }
 
 function main() {
