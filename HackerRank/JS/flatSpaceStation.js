@@ -28,12 +28,20 @@ function readLine() {
 function flatlandSpaceStations(n, c) {
 
   // Build out an array of numbers starting with 0 based on the number of cities (n)
-  let spaceStat = []
+  // let spaceStat = new Array(n).fill(null).map((_, i) => i)
 
   // Define array to be used for distance of each city to a space station
   let distStat = []
-
-  // If n is equal to c.length - 1
+  c.sort((a, b) => a - b)
+  // If n is equal to c's array length
+  if (n === c.length) {
+    return 0
+  } else {
+    for (let i = 0; i < c.length - 1; i++) {
+      const dist = Math.floor(Math.abs(c[i + 1] - c[i]) / 2)
+      distStat.push(dist)
+    }
+  }
   // return 0
   // Otherwise
   // Loop through the created amount of cities array
@@ -42,7 +50,7 @@ function flatlandSpaceStations(n, c) {
 
   // return the max number in the distance array
   // Possibly need to console.log the max distance number to properly check tests
-  return distStat.max
+  return Math.max(...distStat)
 }
 
 function main() {
