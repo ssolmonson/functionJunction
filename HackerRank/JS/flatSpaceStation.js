@@ -33,24 +33,23 @@ function flatlandSpaceStations(n, c) {
   // Define array to be used for distance of each city to a space station
   let distStat = []
   c.sort((a, b) => a - b)
-  // If n is equal to c's array length
+  // If n is equal to c's array length return 0
   if (n === c.length) {
     return 0
+  // Otherwise
+  // Loop through c array to find distances
   } else {
     for (let i = 0; i < c.length - 1; i++) {
       const dist = Math.floor(Math.abs(c[i + 1] - c[i]) / 2)
       distStat.push(dist)
     }
   }
-  // return 0
-  // Otherwise
-  // Loop through the created amount of cities array
-  // Check cities with distance to each of the space stations cities array (c)
-  // Use the lowest and and to distance array
 
+  // Find max distances for the start and finish
+  const start = Math.abs(c[0] - 0)
+  const after = Math.abs(n - c[c.length - 1]) - 1
   // return the max number in the distance array
-  // Possibly need to console.log the max distance number to properly check tests
-  return Math.max(...distStat)
+  return Math.max(...distStat, start, after)
 }
 
 function main() {
