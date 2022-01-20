@@ -1,5 +1,5 @@
 function pigLatin(string){
-  // Add to each return to convert the string to all lowercase
+  // Add to each return (except null if statement) to convert the string to all lowercase
 
   // if string contains any non-alpha characters
     // return null
