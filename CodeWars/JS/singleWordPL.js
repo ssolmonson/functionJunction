@@ -1,5 +1,18 @@
 function pigLatin(string){
-  //
+  // Add to each return to convert the string to all lowercase
+
+  // if string contains any non-alpha characters
+    // return null
+
+  // if string contains no vowels
+    // return "ay"
+
+  // if string starts with a vowel
+    // return string + "way"
+
+  // if starts with a constant
+    // split string at first vowel and add all constants before to the end
+    // return modified string + "ay"
 }
 
 // Tests:
