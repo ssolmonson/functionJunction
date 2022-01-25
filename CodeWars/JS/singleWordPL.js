@@ -1,28 +1,23 @@
 function pigLatin(string){
+  // convert string to lowercase
+  string = string.toLowerCase()
 
   // if string contains any non-alpha characters return null
   if (!/[^a-zA-Z]/.test(string) === false) {
     return null
+
+  // if string contains no vowels return string "ay"
+  } else if (/[aeiou]/gi.test(string) === false) {
+      return string + "ay"
+
+  // if string starts with a vowel return string + "way"
+  } else if (['a', 'e', 'i', 'o', 'u'].indexOf(string[0]) !== -1) {
+      return string + "way"
+
+  // split string at first vowel and add all constants before to the end + "ay"
   } else {
-    // convert string to lowercase
-    const lowerString = string.toLowerCase()
-    // const regExp = /[aeiou]/gi
-    // if string contains no vowels return string "ay"
-    // Test works
-    if (/[aeiou]/gi.test(lowerString) === false) {
-      return lowerString + "ay"
-
-    // if string starts with a vowel return string + "way"
-    // Test works
-  } else if (['a', 'e', 'i', 'o', 'u'].indexOf(lowerString[0]) !== -1) {
-      return lowerString + "way"
-
-    // if starts with a constant return modified string + "ay"
-    // Unfinished
-  } else {  // split string at first vowel and add all constants before to the end
-      const [addEnd, vowelBegin] = lowerString.split(/([aeiou].*)/)
+      const [addEnd, vowelBegin] = string.split(/([aeiou].*)/)
       return vowelBegin + addEnd + "ay"
-    }
   }
 }
 
@@ -40,7 +35,7 @@ function pigLatin(string){
 //   });
 // });
 
-// Refrectored code
+// Alternate refractor
 
 // function pigLatin(string) {
 //   string = string.toLowerCase()
