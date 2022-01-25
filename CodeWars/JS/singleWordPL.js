@@ -39,3 +39,24 @@ function pigLatin(string){
 //     assert.strictEqual(pigLatin("tes3t5"), null);
 //   });
 // });
+
+// Refrectored code
+
+// function pigLatin(string) {
+//   string = string.toLowerCase()
+//   if (string.search(/[^a-z]/)!=-1) return null
+//   pos = string.search(/[aeiou]/)
+//   if (pos === -1) return string + "ay"
+//   if (pos === 0) return string + "way"
+//   else return string.slice(pos,string.length)+string.slice(0,pos) + "ay"
+// }
+
+// Solutions to review which are shorter/simplify further
+
+// function pigLatin(s){
+//   s=s.toLowerCase();
+//   return /[^a-z]/.test(s) ? null : /^[aeiou]/.test(s) ? s+"way" : s.replace(/^[^aeiou]+/,"")+s.match(/^[^aeiou]+/)+"ay";
+// }
+
+// const pigLatin = string =>
+//   /[^a-z]/i.test(string) ? null : string.toLowerCase().replace(/(^[^aeiou]*)(\w*$)/, (_, $1, $2) => $2 + ($1 || `w`) + `ay`)
