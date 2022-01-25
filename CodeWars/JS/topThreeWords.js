@@ -3,6 +3,7 @@ function topThreeWords(text) {
 
   // Possibly separate text into string of words by using split on spaces,
   // or any character that is not an apostrophe
+  // const wordsArray = text.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/)
 
   // Words containing only apostrophes are not words and should not be recognized
 
@@ -15,6 +16,12 @@ function topThreeWords(text) {
   // If a match is found
   // Add one to the count and and the word to the matchingWords array
   // Then add the count number to the countArray to match the indicy of the word
+
+  const matchingWords = new Array()
+  const countArray = new Array()
+
+  // Use forEach()
+  
   // Find the index of the highest 3 numbers in the count array
   // Use that indicies to take the words from matchingWords and push them to the topThree array
   // return the topThree array
