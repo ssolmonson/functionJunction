@@ -20,7 +20,8 @@ function pigLatin(string){
     // if starts with a constant return modified string + "ay"
     // Unfinished
   } else {  // split string at first vowel and add all constants before to the end
-      return lowerString + "ayyyy"
+      const [addEnd, vowelBegin] = lowerString.split(/([aeiou].*)/)
+      return vowelBegin + addEnd + "ay"
     }
   }
 }
