@@ -5,20 +5,20 @@ function pigLatin(string){
     return null
   } else {
     // convert string to lowercase
-    const lowerString = string.toLowerCase
-    const regExp = /[aeiou]/gi
+    const lowerString = string.toLowerCase()
+    // const regExp = /[aeiou]/gi
     // if string contains no vowels return string "ay"
     // Test works
-    if (regExp.test(lowerString) === false) {
+    if (/[aeiou]/gi.test(lowerString) === false) {
       return lowerString + "ay"
 
     // if string starts with a vowel return string + "way"
-    // Test failed
+    // Test works
   } else if (['a', 'e', 'i', 'o', 'u'].indexOf(lowerString[0]) !== -1) {
       return lowerString + "way"
 
     // if starts with a constant return modified string + "ay"
-    // Unfinished 
+    // Unfinished
   } else {  // split string at first vowel and add all constants before to the end
       return lowerString + "ayyyy"
     }
