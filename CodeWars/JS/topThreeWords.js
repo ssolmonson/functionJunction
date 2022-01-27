@@ -3,14 +3,20 @@ function topThreeWords(text) {
 
   // Possibly separate text into string of words by using split on spaces,
   // or any character that is not an apostrophe
-  // const wordsArray = text.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/)
+  const wordsArray = text.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/)
 
   // Words containing only apostrophes are not words and should not be recognized
 
-  // if the text contains no words
-  // return an empty array
-
   // if text is fewer than three words return top words
+  if (wordsArray.length === 0) {
+    // return an empty array
+    return []
+  }
+
+  // if the text contains no words
+  if (wordsArray.length <== 3) {
+
+  }
 
   // Loop through text comparing a word to find matches of the same
   // If a match is found
@@ -21,7 +27,7 @@ function topThreeWords(text) {
   const countArray = new Array()
 
   // Use forEach()
-  
+
   // Find the index of the highest 3 numbers in the count array
   // Use that indicies to take the words from matchingWords and push them to the topThree array
   // return the topThree array
