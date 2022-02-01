@@ -14,8 +14,8 @@ function topThreeWords(text) {
   }
 
   // if the text contains no words
-  if (wordsArray.length <== 3) {
-
+  if (wordsArray.length <= 3) {
+    return wordsArray
   }
 
   // Loop through text comparing a word to find matches of the same
@@ -26,8 +26,15 @@ function topThreeWords(text) {
   const matchingWords = new Array()
   const countArray = new Array()
 
-  // Use forEach()
+  if (wordsArray.length > 3) {
+    wordsArray.reduce((count, word) => {
+      count[word] = count.hasOwnProperty(word) ? count[word] + 1 : 1)
+      return count
+    }, {})
+  }
 
+  // Use forEach()
+  // wordsArray.forEach()
   // Find the index of the highest 3 numbers in the count array
   // Use that indicies to take the words from matchingWords and push them to the topThree array
   // return the topThree array
