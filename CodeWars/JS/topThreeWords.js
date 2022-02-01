@@ -8,13 +8,14 @@ function topThreeWords(text) {
   // Words containing only apostrophes are not words and should not be recognized
 
   // if text is fewer than three words return top words
-  if (wordsArray.length === 0) {
+  // Not complete, needs better specification
+  if (wordsArray.length === 0 || wordsArray.includes('')) {
     // return an empty array
     return []
   }
 
   // if the text contains no words
-  if (wordsArray.length <= 3) {
+  if (wordsArray.length != 0 && wordsArray.length <= 3) {
     return wordsArray
   }
 
@@ -27,8 +28,8 @@ function topThreeWords(text) {
   const countArray = new Array()
 
   if (wordsArray.length > 3) {
-    wordsArray.reduce((count, word) => {
-      count[word] = count.hasOwnProperty(word) ? count[word] + 1 : 1)
+    return wordsArray.reduce((count, word) => {
+      count[word] = count.hasOwnProperty(word) ? count[word] + 1 : 1
       return count
     }, {})
   }
