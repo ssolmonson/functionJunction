@@ -3,34 +3,18 @@
 
 # Refractor
 def narcissistic( value ):
-    digits = [int(d) for d in str(value)]
 
-
-    numberDigits = len(digits)    
+    numberDigits = len(str(value))    
 
     total = 0
-    if numberDigits == 1:
-        return True
 
-    else:
-        for digit in digits:
-            # n ** numberDigits or pow(n, numberDigits)
-            total += digit ** numberDigits
+    for digit in str(value):
+        total += int(digit) ** numberDigits
 
     if total == value:
         return True
     else:
         return False
-
-
-
-
-
-
-
-
-
-
 
 # FIRST ATTEMPT
 # def narcissistic( value ):
