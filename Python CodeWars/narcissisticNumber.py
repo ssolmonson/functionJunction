@@ -13,6 +13,10 @@ def narcissistic( value ):
         return True
     else:
         return False
+    
+# Top answer seen after submission of the above
+# def narcissistic(value):
+#    return value == sum(int(x) ** len(str(value)) for x in str(value))    
 
 # FIRST ATTEMPT
 # def narcissistic( value ):
