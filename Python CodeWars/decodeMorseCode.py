@@ -9,7 +9,18 @@ def decode_morse(morse_code):
     #   MORSE_CODE['...-..-'] = '$'
 
     # Create variable for list from string
-    morseList = morse_code.split()
+    # morseList = morse_code.split()
+    morseList = []
+    count = 0
+
+    for m in morse_code.split():
+        if m == "":
+            count += 0
+        else:
+            if count:
+                morseList.append(" " * count)
+                count = 0
+            morseList.append(m)
     # Loop of morse_code string
     #   Using MORSE_CODE library define what each list item represents and add to new string
     # Then concat string to form the result
