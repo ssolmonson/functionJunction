@@ -4,11 +4,15 @@
 def friend(x):
     
     # Create variable of empty list for friends to be added to
+    friendList = []
     
     # Loop over friend list 
     #   for each friend split string into list
     #   Compare length of string to 4
     #   if equal to 4 append name to friend list
+    for f in x:
+        if len(f.split()) == 4:
+            friendList.append(f)
 
     # return list of friends
-    pass
+    return friendList
