@@ -7,12 +7,22 @@ def friend(x):
     friendList = []
     
     # Loop over friend list 
-    #   for each friend split string into list
     #   Compare length of string to 4
     #   if equal to 4 append name to friend list
     for f in x:
-        if len(f.split()) == 4:
+        # print(f.split())
+        # print(''.join(f.split()))
+        if len(f) == 4:
             friendList.append(f)
+        # print(f)
 
     # return list of friends
     return friendList
+    # print(friendList)
+
+# Console test
+friend(["Ryan", "Kieran", "Mark",])
+
+# Notes:
+# Initial try may have been using .split() on the list.
+# Also it may not even be needed to split the string, simply could compare the string to a number. Completely overthought this step.
