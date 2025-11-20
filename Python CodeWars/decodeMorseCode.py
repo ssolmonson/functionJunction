@@ -9,17 +9,22 @@ def decode_morse(morse_code):
     #   MORSE_CODE['...-..-'] = '$'
 
     # Create variable for list from string
-    # morseList = morse_code.split()
     morseList = []
-    # rawString = morse_code.split()
-    # count = 0
 
+    # Split string into list of strings keeping single spaces
     for morsal in morse_code.split(" "):
         if morsal != "":
             morseList.append(morsal)
         else:
             if len(morseList) == 0 or morseList[-1] != " ":
                 morseList.append(" ")
+
+    # Remove leading or trailing whitespaces
+    if morseList[0] == ' ':
+        del morseList[0]
+    if morseList[-1].strip() == "":
+        del morseList[-1]
+
     # Loop of morse_code string
     #   Using MORSE_CODE library define what each list item represents and add to new string
     # Then concat string to form the result
