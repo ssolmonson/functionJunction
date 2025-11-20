@@ -11,23 +11,24 @@ def decode_morse(morse_code):
     # Create variable for list from string
     # morseList = morse_code.split()
     morseList = []
-    count = 0
+    # rawString = morse_code.split()
+    # count = 0
 
-    for m in morse_code.split():
-        if m == "":
-            count += 0
+    for morsal in morse_code.split(" "):
+        if morsal != "":
+            morseList.append(morsal)
         else:
-            if count:
-                morseList.append(" " * count)
-                count = 0
-            morseList.append(m)
+            if len(morseList) == 0 or morseList[-1] != " ":
+                morseList.append(" ")
     # Loop of morse_code string
     #   Using MORSE_CODE library define what each list item represents and add to new string
     # Then concat string to form the result
     
     # Additional thoughts:
-    #   Keep in mind potential spcaing and may have to adjust for it in the loop
+    #   Fixed: Keep in mind potential spcaing and may have to adjust for it in the loop
     #       First attempt proved the space is not included in the split. Need to figure out how to include the space
+    #   Will also need to ensure leading and trailing whitespaces (spaces) are removed
+    #       As an initial thought could use the index to remove spaces if the first/last index equal space strings
 
     # Used to test
     # Comment out 'print' when attempting to solve kata
@@ -36,3 +37,4 @@ def decode_morse(morse_code):
     # Add back below line when attempting
     # pass
 decode_morse('.... . -.--   .--- ..- -.. .')
+decode_morse('   .   . ')
