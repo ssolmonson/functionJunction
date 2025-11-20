@@ -26,3 +26,7 @@ friend(["Ryan", "Kieran", "Mark",])
 # Notes:
 # Initial try may have been using .split() on the list.
 # Also it may not even be needed to split the string, simply could compare the string to a number. Completely overthought this step.
+
+# Thought could refractor to a one liner but submitted the above as I like the readability. For document purposes could refractor further to:
+# def friend(x):
+#     return [f for f in x if len(f) == 4]
