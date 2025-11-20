@@ -3,13 +3,11 @@
 
 # Refractor
 def narcissistic( value ):
-
-    numberDigits = len(str(value))    
-
+ 
     total = 0
 
     for digit in str(value):
-        total += int(digit) ** numberDigits
+        total += int(digit) ** len(str(value))
 
     if total == value:
         return True
