@@ -11,7 +11,7 @@ def narcissistic( value ):
     numberDigits = len(digits)    
     # if number of digits equals 1 return True
     total = 0
-    if numberDigits == 1
+    if numberDigits == 1:
         return True
     # else use stored number for comparisson
     else:
@@ -23,7 +23,7 @@ def narcissistic( value ):
             # and add
         
     # Then compare looped value to original value and return true or false
-    if total == value
+    if total == value:
         return True
     else:
         return False
