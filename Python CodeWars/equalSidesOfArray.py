@@ -16,11 +16,19 @@ def find_even_index(arr):
         rightArr = sum(arr[i+1:])
         # leftArrSum = sum(leftArr)
         # rightArrSum = sum(rightArr)
+        equalIndex = i
         # Compare values. If splits at index are equal return index.
-        # if leftArrSum == rightArrSum:
-        #   return i
-        print(leftArr)
-        print(rightArr)
+        if leftArr == rightArr:
+          
+          return equalIndex
+          # print(i)
+        
+        else:
+            return -1
+            # print(-1)
+        
+        # print(leftArr)
+        # print(rightArr)
         # print(i)
     # pass
     # print(arr)
@@ -29,6 +37,8 @@ def find_even_index(arr):
 #   - Use console to view stored values
 #   - Can test on single value first
 # Possibly can directly compare the sums without storing variables
+
+# Tests pass for some but return -1 for others
 
 # Console Tests:
 find_even_index([1,2,3,4,3,2,1]) # Should be 3
