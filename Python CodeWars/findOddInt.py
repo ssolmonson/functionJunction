@@ -14,3 +14,6 @@ def find_it(seq):
     else:
         return -1
     # return None
+
+# Test funtion calls
+find_it([1,1,1,1,1,1,10,1,1,1,1]) # Expected 10
