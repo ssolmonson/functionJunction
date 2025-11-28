@@ -4,15 +4,15 @@
 def find_it(seq):
     intCount = 0
     # Loop over array
-    for i in seq:
-    # If one value (int) equals another increase count
-        if seq[i] == seq[i+1]:
-            intCount += 1
+    for i in range(len(seq)):
+        for j in range(i + 1, len(seq)):
+            # If one value (int) equals another increase count
+            print(seq[i], "compared to", seq[j])
             
-    if intCount != 0:
-        return intCount
-    else:
-        return -1
+    # if intCount != 0:
+        # return intCount
+    # else:
+        # return -1
     # return None
 
 # Test funtion calls
